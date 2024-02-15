@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Footer text color */
+.footer-text {
+  color: #6f848f;
+}
