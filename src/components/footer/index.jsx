@@ -9,7 +9,9 @@ function Footer() {
       <footer className="footer p-10  text-base-content ">
         {FOOTER_LINKS.map((footer) => (
           <nav key={footer.id}>
-            <h6 className="footer-title text-[#FFFFFF]">{footer.title}</h6>
+            <h6 className="footer-title capitalize text-base text-[#FFFFFF]">
+              {footer.title}
+            </h6>
             <div className="flex flex-col gap-2 footer-text">
               {footer.links.map((link) => (
                 <Link

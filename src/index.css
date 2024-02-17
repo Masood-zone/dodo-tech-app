@@ -1,8 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.6px;
+  scrollbar-width: thin;
+  scrollbar-color: blue;
+}
+
+/* On-board services*/
+.card {
+  position: relative;
+  background: #3063ad;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100%;
+  background: linear-gradient(to left, #3063ad, #3063ad, #305384);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* FAQ - Accordion*/
+.text-gradient {
+  background: linear-gradient(to right, #031afd, #0000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid transparent; /* Fallback for browsers that don't support border-image */
+  border-image: linear-gradient(to right, #bfc0ff, #c3dffc) 1;
+  -webkit-border-image: linear-gradient(to right, #bfc0ff, #c3dffc) 1;
+  border-image-slice: 1;
+}
+
+/* Navbar transparency */
+.navbar-transparent {
+  background-color: rgba(249, 250, 251, 0.8);
+}
 /* Footer text color */
 .footer-text {
   color: #6f848f;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
 }

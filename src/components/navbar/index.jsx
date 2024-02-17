@@ -5,9 +5,9 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 function Navbar() {
   return (
-    <div className="navbar bg-base-100 sticky">
+    <div className="navbar fixed w-full top-0 left-0 z-10 navbar-transparent">
       {/* Main logo */}
-      <div className="navbar-start">
+      <div className="navbar-start items-center">
         <div className="dropdown">
           {/* Icon */}
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -25,19 +25,19 @@ function Navbar() {
             ))}
           </ul>
         </div>
-        <h1 className="text-[#03CCFF] font-bold text-3xl lowercase">
+        <h1 className="text-4xl lowercase font-bold text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-400">
           <Link to="/">Dodo</Link>
         </h1>
-      </div>
-      {/* Navlinks */}
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {NAV_LINKS.map((link) => (
-            <li key={link.id} className="text-lg">
-              <Link to={link.path}>{link.linkName}</Link>
-            </li>
-          ))}
-        </ul>
+        {/* Navlinks */}
+        <div className="hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">
+            {NAV_LINKS.map((link) => (
+              <li key={link.id} className="text-base">
+                <Link to={link.path}>{link.linkName}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       {/* Buttons */}
       <div className="navbar-end flex gap-3">
