@@ -1,7 +1,7 @@
 import React from "react";
 import Thumbnail from "../thumbnail";
 
-function Card({ cardData, icon, size }) {
+function Card({ cardData, icon, size, hasList }) {
   return cardData.map((data) =>
     data.id % 2 !== 0 ? (
       <div
@@ -15,6 +15,18 @@ function Card({ cardData, icon, size }) {
           <h1 className="text-light-gray text-3xl max-md:text-2xl font-bold mb-10 max-md:mb-2">
             {data.title}
           </h1>
+
+          {hasList ? (
+            <ul className="list-disc ml-16">
+              {data.lists.map((list) => (
+                <li className="py-2" key={list.id}>
+                  {list.note}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            ""
+          )}
           <p className="text-light-gray text-sm py-5 max-md:p-1">
             {data.message}
           </p>
@@ -29,6 +41,17 @@ function Card({ cardData, icon, size }) {
           <h1 className="text-light-gray text-3xl max-md:text-2xl font-bold mb-10 max-md:mb-2">
             {data.title}
           </h1>
+          {hasList ? (
+            <ul className="list-disc ml-16">
+              {data.lists.map((list) => (
+                <li className="py-2" key={list.id}>
+                  {list.note}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            ""
+          )}
           <p className="text-light-gray text-sm py-5 max-md:p-1">
             {data.message}
           </p>

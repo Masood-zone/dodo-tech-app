@@ -1,7 +1,35 @@
 import React from "react";
+import Header from "../../components/header";
+import thumbIcon from "../../assets/svg/thumbnail.svg";
+import Card from "../../components/card";
+import { FAQ, INDUSTRY_DATA } from "../../data/industryData";
+import Faq from "../../components/faq";
 
 function Industries() {
-  return <div>Industries</div>;
+  return (
+    <div className="flex flex-col my-20 w-full">
+      {/* Header */}
+      <Header
+        title="Make corporate communication simple and productive"
+        message="Deliver standout customer service by putting experts, tools and information that your agents needs at their fingertips."
+        icon={thumbIcon}
+        styling="max-w-6xl m-auto"
+      />
+      {/* Industries list section */}
+      <section className="flex flex-col items-center justify-start px-10 mt-20 max-md:p-0">
+        <Card
+          cardData={INDUSTRY_DATA}
+          icon={thumbIcon}
+          size="w-full h-96 bg-base-200"
+          hasList
+        />
+      </section>
+      {/* FAQ */}
+      <section className="my-28 px-10 flex flex-col">
+        <Faq data={FAQ} />
+      </section>
+    </div>
+  );
 }
 
 export default Industries;

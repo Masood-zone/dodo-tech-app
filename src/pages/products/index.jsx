@@ -1,8 +1,5 @@
 import React from "react";
 import thumbIcon from "../../assets/svg/thumbnail.svg";
-import { FaArrowRightLong } from "react-icons/fa6";
-import { Link } from "react-router-dom";
-import Thumbnail from "../../components/thumbnail";
 import Card from "../../components/card";
 import {
   BOARD_SERVICES,
@@ -14,42 +11,25 @@ import ServicesCard from "../../components/card/servicesCard";
 import manImage from "../../assets/images/businessman-photo.jpg";
 import BannerCard from "../../components/card/bannerCard";
 import Faq from "../../components/faq";
+import Header from "../../components/header";
 
 function Products() {
   return (
     <div className="flex flex-col my-20 w-full">
       {/* Top Section */}
-      <section className="flex flex-col items-center justify-center max-w-4xl mx-auto">
-        <div className="text-center">
-          <h1 className="text-4xl capitalize font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#031AFD] to-blue-400 py-3">
-            Why We Built Dodo?
-          </h1>
-          <p className="font-bold text-2xl py-3 text-light-gray">
-            Increase workplace productivity by transforming enterprise
-            communications.
-          </p>
-          <p className="text-light-gray py-4">
-            The problem of combining communication and connection in companies
-            across the companies is very decentralized and difficult. Many at a
-            times, most companies use a combined medium of communication across
-            multiple industries to talk which is static, immobile, non-legacy
-            and very outdated and a list faction in between the communication
-            and not enhancing productivity for the team.
-          </p>
-          <Link
-            to="/pricing"
-            role="button"
-            className="w-max flex gap-2 m-auto items-center bg-[#031AFD] text-white p-3 my-2 rounded-md hover:bg-[#2939cb]"
-          >
-            Sign up and use Dodo for free.
-            <FaArrowRightLong />
-          </Link>
-        </div>
-        {/* Image  */}
-        <div className="w-full">
-          <Thumbnail icon={thumbIcon} size="w-[400px] h-96" />
-        </div>
-      </section>
+      <Header
+        title="Why We Built Dodo?"
+        note="Increase workplace productivity by transforming enterprise
+          communications."
+        message="The problem of combining communication and connection in companies
+          across the companies is very decentralized and difficult. Many at a
+          times, most companies use a combined medium of communication across
+          multiple industries to talk which is static, immobile, non-legacy and
+          very outdated and a list faction in between the communication and not
+          enhancing productivity for the team."
+        icon={thumbIcon}
+        styling="flex flex-col items-center justify-center max-w-4xl mx-auto"
+      />
       {/* Products list section */}
       <section className="flex flex-col items-center justify-start px-10 mt-20 max-md:p-0">
         <Card
