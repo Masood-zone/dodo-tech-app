@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../components/header";
-import thumbIcon from "../../assets/svg/thumbnail.svg";
+import { placeholder, placeholder2 } from "../../assets/images/index";
 import Card from "../../components/card";
 import { FAQ, INDUSTRY_DATA } from "../../data/industryData";
 import Faq from "../../components/faq";
@@ -12,14 +12,14 @@ function Industries() {
       <Header
         title="Make corporate communication simple and productive"
         message="Deliver standout customer service by putting experts, tools and information that your agents needs at their fingertips."
-        icon={thumbIcon}
+        icon={placeholder}
         styling="max-w-6xl m-auto"
       />
       {/* Industries list section */}
       <section className="flex flex-col items-center justify-start px-10 mt-20 max-md:p-0">
         <Card
           cardData={INDUSTRY_DATA}
-          icon={thumbIcon}
+          icon={placeholder2}
           size="w-full h-96 bg-base-200"
           hasList
         />

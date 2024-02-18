@@ -3,7 +3,7 @@ import React from "react";
 function ServicesCard({ color, data, title, message }) {
   return (
     <>
-      <h1 className="text-light-gray text-4xl font-bold my-5">{title}</h1>
+      <h1 className="text-heading-gray text-4xl font-bold my-5">{title}</h1>
       <p className="text-light-gray text-sm my-1">{message}</p>
       {/* List section */}
       <div className="flex max-md:flex-wrap max-w-7xl items-center justify-center gap-8 text-center mt-12">

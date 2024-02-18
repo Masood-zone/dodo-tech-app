@@ -1,9 +1,4 @@
-import spaceShip from "../assets/svg/spaceship.svg";
-import peopleIcon from "../assets/svg/people.svg";
-import securityIcon from "../assets/svg/secure.svg";
-import planetIcon from "../assets/svg/planet.svg";
-import spaceShipWhite from "../assets/svg/spaceship-white.svg";
-import ideaIcon from "../assets/svg/idea.svg";
+import { Rocket, Profile, Security, Earth } from "../assets/svgs/index";
 
 export const FEATURES_DATA = [
   {
@@ -50,52 +45,28 @@ export const FEATURES_SERVICES = [
     title: "Communicate with, and integrate Voice Calls on the Go.",
     message:
       "Stay productive by seamlessly integrating voice calls into your mobile workflow, ensuring convenient communication and effective collaboration on the move.",
-    icon: spaceShip,
+    icon: Rocket,
   },
   {
     id: 2,
     title: "Organize Teams & Departments.",
     message:
       "Efficiently organize teams and departments with our solution, streamlining collaboration and enhancing productivity in your organization.",
-    icon: peopleIcon,
+    icon: Profile,
   },
   {
     id: 3,
     title: "Secured messages for the employess anywhere.",
     message:
       "Ensure secure communication with our solution, providing platform for confidential and protected interactions in your business.",
-    icon: securityIcon,
+    icon: Security,
   },
   {
     id: 4,
     title: "Share files and collaborate anywhere.",
     message:
       "Connect and collaborate effortlessly from anywhere in the world with our solution, breaking down geographical barriers for seamless communication.",
-    icon: planetIcon,
-  },
-];
-
-export const DEDICATED_SPACES = [
-  {
-    id: 1,
-    title: "Public Communication",
-    message:
-      "These channels are open for anyone at your company to join or find in search. Increase transparency while allowing everyone to benefit from the context of your conversations.",
-    icon: spaceShipWhite,
-  },
-  {
-    id: 2,
-    title: "Private Communication",
-    message:
-      "For sensitive of confidential conversations, you can use private channels. Only those who are invited can view the channel or find it's contents in search.",
-    icon: ideaIcon,
-  },
-  {
-    id: 3,
-    title: "Dodo Connect",
-    message:
-      "Bring people from external organizations into secure Slack chanels. Speed up communication and get work done with clients, vendors, agencies and more.",
-    icon: ideaIcon,
+    icon: Earth,
   },
 ];
 

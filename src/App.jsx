@@ -3,7 +3,6 @@ import Layout from "./components/layout";
 import Products from "./pages/products";
 import Features from "./pages/features";
 import Industries from "./pages/industries";
-import Resources from "./pages/resources";
 import Pricing from "./pages/pricing";
 import Home from "./pages/home";
 import SignIn from "./pages/signin";
@@ -22,7 +21,6 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/features" element={<Features />} />
             <Route path="/industries" element={<Industries />} />
-            <Route path="/resources" element={<Resources />} />
             <Route path="/pricing" element={<Pricing />} />
           </Route>
           <Route path="/signin" element={<SignIn />} />

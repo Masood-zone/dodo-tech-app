@@ -1,18 +1,10 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import chatIcon from "../../assets/images/chat-bubble.png";
 import { Link } from "react-router-dom";
-import mainImage from "../../assets/images/world-chat.jpg";
 import Card from "../../components/card";
-import {
-  DEDICATED_SPACES,
-  FAQ,
-  FEATURES_DATA,
-  FEATURES_SERVICES,
-} from "../../data/featuresData";
+import { FAQ, FEATURES_DATA, FEATURES_SERVICES } from "../../data/featuresData";
 import ServicesCard from "../../components/card/servicesCard";
-import BannerCard from "../../components/card/bannerCard";
-import meetingImg from "../../assets/images/meeting-img.jpg";
+import { banner, benefitOne, feature } from "../../assets/images/index";
 import Faq from "../../components/faq";
 
 function Features() {
@@ -40,34 +32,26 @@ function Features() {
         </div>
         {/* Image */}
         <div className="w-full overflow-hidden">
-          <img src={mainImage} alt="business-bubble" className="rounded-md" />
+          <img src={benefitOne} alt="business-bubble" className="rounded-md" />
         </div>
       </section>
       {/* Features list section */}
-      <section className="flex flex-col items-center justify-start px-10 mt-20 max-md:p-0">
-        <Card
-          cardData={FEATURES_DATA}
-          icon={chatIcon}
-          size="w-96 h-80 shadow-2xl"
-        />
+      <section className="flex flex-col items-center justify-start px-10 mt-28 max-md:p-0">
+        <Card cardData={FEATURES_DATA} icon={feature} size="w-full h-full " />
       </section>
       {/* Services section */}
-      <section className="flex flex-col items-center justify-center gap-5 mt-14">
+      <section className="flex flex-col items-center justify-center gap-5 my-28">
         <ServicesCard
           data={FEATURES_SERVICES}
           title="A communication that suits your workplace, however you work."
         />
       </section>
       {/* Banner section */}
-      <section className="mt-28">
-        <BannerCard
-          title="Work together in dedicated spaces"
-          data={DEDICATED_SPACES}
-          image={meetingImg}
-        />
+      <section className="my-28">
+        <img src={banner} alt="banner" className="w-full" />
       </section>
       {/* FAQ section */}
-      <section className="my-28 px-10 flex flex-col">
+      <section className="my-48 px-10 flex flex-col">
         <Faq data={FAQ} />
       </section>
     </div>

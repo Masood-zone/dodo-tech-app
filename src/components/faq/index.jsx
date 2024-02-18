@@ -19,10 +19,10 @@ function Faq({ data }) {
               onChange={() => handleToggle(index)}
             />
             <div
-              className={`collapse-title text-xl font-bold text-heading-gray ${
+              className={`collapse-title text-xl font-bold ${
                 activeIndex === index
                   ? "text-blue-500 border-b-2 border-blue-500"
-                  : ""
+                  : "text-heading-gray"
               }`}
             >
               {question.title}

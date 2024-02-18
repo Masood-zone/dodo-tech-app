@@ -1,11 +1,17 @@
 import { MdOutlineMenu } from "react-icons/md";
 import { BUTTON_LINKS, NAV_LINKS } from "./data";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useState } from "react";
+import { Logo } from "../../assets/svgs/index";
 
 function Navbar() {
+  const [activeLink, setActiveLink] = useState(null);
+  const handleActiveLinkClick = (path) => {
+    setActiveLink(path);
+  };
   return (
-    <div className="navbar fixed w-full top-0 left-0 z-10 navbar-transparent">
+    <div className="navbar fixed w-full top-0 left-0 z-10 navbar-transparent px-10 py-4">
       {/* Main logo */}
       <div className="navbar-start items-center">
         <div className="dropdown">
@@ -25,16 +31,31 @@ function Navbar() {
             ))}
           </ul>
         </div>
-        <h1 className="text-4xl lowercase font-bold text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-400">
-          <Link to="/">Dodo</Link>
-        </h1>
+
         {/* Navlinks */}
         <div className="hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             {NAV_LINKS.map((link) => (
-              <li key={link.id} className="text-base">
-                <Link to={link.path}>{link.linkName}</Link>
-              </li>
+              <NavLink
+                key={link.id}
+                to={link.path}
+                onClick={() => handleActiveLinkClick(link.path)}
+                className={
+                  activeLink === link.path
+                    ? "active-link text-blue-500 font-medium px-2 py-1 ml-8 text-base"
+                    : "px-2 py-1 ml-8 text-base"
+                }
+              >
+                {link.linkName === "Dodo" ? (
+                  <h1 className="w-20 lowercase font-bold text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-400">
+                    <Link to="/">
+                      <img src={Logo} alt="main-logo" className="" />
+                    </Link>
+                  </h1>
+                ) : (
+                  link.linkName
+                )}
+              </NavLink>
             ))}
           </ul>
         </div>

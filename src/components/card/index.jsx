@@ -4,18 +4,18 @@ import Thumbnail from "../thumbnail";
 function Card({ cardData, icon, size, hasList }) {
   return cardData.map((data) =>
     data.id % 2 !== 0 ? (
+      // First card
       <div
         key={data.id}
-        className="w-full flex items-center max-md:flex-col gap-10 mt-16 max-md:items-start max"
+        className="w-full h-96 flex items-center max-md:flex-col gap-24 my-28 justify-between max-md:items-start"
       >
         <div className="w-full">
-          <Thumbnail icon={icon} size={size} />
+          <Thumbnail icon={data.icon ? data.icon : icon} size={size} />
         </div>
         <div className="w-full">
-          <h1 className="text-light-gray text-3xl max-md:text-2xl font-bold mb-10 max-md:mb-2">
+          <h1 className="text-heading-gray text-3xl max-md:text-2xl font-bold mb-10 max-md:mb-2">
             {data.title}
           </h1>
-
           {hasList ? (
             <ul className="list-disc ml-16">
               {data.lists.map((list) => (
@@ -33,12 +33,13 @@ function Card({ cardData, icon, size, hasList }) {
         </div>
       </div>
     ) : (
+      // Second card
       <div
         key={data.id}
-        className="w-full flex items-center gap-10 mt-16 max-md:flex-col-reverse"
+        className="w-full h-96 flex items-center justify-between gap-24 my-28 max-md:flex-col-reverse"
       >
         <div className="w-full">
-          <h1 className="text-light-gray text-3xl max-md:text-2xl font-bold mb-10 max-md:mb-2">
+          <h1 className="text-heading-gray text-3xl max-md:text-2xl font-bold mb-10 max-md:mb-2">
             {data.title}
           </h1>
           {hasList ? (
@@ -57,7 +58,7 @@ function Card({ cardData, icon, size, hasList }) {
           </p>
         </div>
         <div className="w-full">
-          <Thumbnail icon={icon} size={size} />
+          <Thumbnail icon={data.icon ? data.icon : icon} size={size} />
         </div>
       </div>
     )

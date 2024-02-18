@@ -1,9 +1,4 @@
-import spaceShip from "../assets/svg/spaceship.svg";
-import spaceShipWhite from "../assets/svg/spaceship-white.svg";
-import peopleIcon from "../assets/svg/people.svg";
-import securityIcon from "../assets/svg/secure.svg";
-import planetIcon from "../assets/svg/planet.svg";
-import ideaIcon from "../assets/svg/idea.svg";
+import { Earth, Profile, Rocket, Security } from "../assets/svgs/index";
 
 export const PRODUCT_LIST_DATA = [
   {
@@ -31,59 +26,35 @@ export const PRODUCTS_SERVICES = [
     title: "Centralization",
     message:
       "All content in Dodo is searchable, so there is no need to forward a lot of emails to the person joining the project.",
-    icon: spaceShip,
+    icon: Rocket,
   },
   {
     id: 2,
     title: "Transparency",
     message:
       "File-sharing, calls, clips, and more are all built on Dodo-along with real-time messaging. So you can truly work together however you work best.",
-    icon: peopleIcon,
+    icon: Profile,
   },
   {
     id: 3,
     title: "Collaboration",
     message:
       "Dodo brings internal and external teams together across locations, time zones and working styles, instead of confirming work to be siloed communication of email.",
-    icon: securityIcon,
+    icon: Security,
   },
   {
     id: 4,
     title: "Effectiveness",
     message:
       "In Dodo you can turn routine messages and tasks such as huddle meetings, approvals, and requests into automated workflows to save on the back-and-forth.",
-    icon: planetIcon,
+    icon: Earth,
   },
   {
     id: 5,
     title: "Productivity",
     message:
       "Collaboration in email opens up the risk of spam and phising. In Dodo you can work securely with partners, vendors and customers.",
-    icon: planetIcon,
-  },
-];
-
-export const BOARD_SERVICES = [
-  {
-    id: 1,
-    title: "Sign up",
-    message:
-      "Create a new Dodo account in a matter of minutes. It's free to try for teams of any size.",
-    icon: spaceShipWhite,
-  },
-  {
-    id: 2,
-    title: "On-board your colleauges",
-    message:
-      "Dodo is better together(no, really it's a bit underwhelming by yourself), and it's easy to invite your team.",
-    icon: ideaIcon,
-  },
-  {
-    id: 3,
-    title: "Pick up exactly and communicate with anyone in your company easily",
-    message:
-      "Try bringing an email into Dodo and continue the conversation. Your team/boss will thank you.",
-    icon: ideaIcon,
+    icon: Earth,
   },
 ];
 

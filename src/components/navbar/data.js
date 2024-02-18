@@ -6,23 +6,23 @@ import { IoLogoLinkedin } from "react-icons/io5";
 const NAV_LINKS = [
   {
     id: 1,
+    linkName: "Dodo",
+    path: "/",
+  },
+  {
+    id: 2,
     linkName: "Products",
     path: "/products",
   },
   {
-    id: 2,
+    id: 3,
     linkName: "Features",
     path: "/features",
   },
   {
-    id: 3,
+    id: 4,
     linkName: "Industries",
     path: "/industries",
-  },
-  {
-    id: 4,
-    linkName: "Resources",
-    path: "/resources",
   },
   {
     id: 5,
