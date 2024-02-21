@@ -61,9 +61,21 @@ function Navbar() {
         </div>
       </div>
       {/* Buttons */}
-      <div className="navbar-end flex gap-3">
+      <div className="navbar-end flex gap-3 max-md:w-full">
         {BUTTON_LINKS.map((button) => (
-          <Link key={button.id} className="btn btn-ghost" to={button.path}>
+          <Link
+            key={button.id}
+            className={`${
+              button.variant === "none"
+                ? "btn btn-ghost "
+                : button.variant === "outlined"
+                ? "border-2 border-blue-600 rounded flex items-center gap-2 p-2 text-blue-600"
+                : button.variant === "filled"
+                ? "bg-[#031AFD] text-white rounded flex items-center gap-2 p-2"
+                : "btn btn-ghost"
+            }`}
+            to={button.path}
+          >
             {button.name}
             <FaArrowRightLong />
           </Link>

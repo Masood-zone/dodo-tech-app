@@ -1,13 +1,17 @@
 import React from "react";
 import Thumbnail from "../thumbnail";
 
-function Card({ cardData, icon, size, hasList }) {
+function Card({ cardData, icon, size, hasList, isFeature }) {
   return cardData.map((data) =>
     data.id % 2 !== 0 ? (
       // First card
       <div
         key={data.id}
-        className="w-full h-96 flex items-center max-md:flex-col gap-24 my-28 justify-between max-md:items-start"
+        className={`${
+          isFeature
+            ? "w-full h-96 flex items-center max-md:flex-col gap-24 my-5 justify-between max-md:items-start"
+            : "w-full h-96 flex items-center max-md:flex-col gap-24 my-28 justify-between max-md:items-start"
+        }`}
       >
         <div className="w-full">
           <Thumbnail icon={data.icon ? data.icon : icon} size={size} />

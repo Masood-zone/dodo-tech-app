@@ -11,7 +11,10 @@ function Faq({ data }) {
       <h1 className="font-bold text-4xl mb-5">Freqeuntly Asked Questions</h1>
       <div className="w-full join join-vertical">
         {data.map((question, index) => (
-          <div key={question.id} className="collapse collapse-arrow join-item">
+          <div
+            key={question.id}
+            className="collapse collapse-arrow join-item py-5"
+          >
             <input
               type="radio"
               name="my-accordion-2"
@@ -19,7 +22,7 @@ function Faq({ data }) {
               onChange={() => handleToggle(index)}
             />
             <div
-              className={`collapse-title text-xl font-bold ${
+              className={`collapse-title text-xl font-medium ${
                 activeIndex === index
                   ? "text-blue-500 border-b-2 border-blue-500"
                   : "text-heading-gray"

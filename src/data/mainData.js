@@ -35,29 +35,23 @@ export const PRODUCTS_SERVICES = [
   },
   {
     id: 2,
-    title: "Organize Teams & Departments",
+    title: "Organize Teams & Departments.",
     message:
-      "Effiently organize teams and with our solution, streamlining collaboration.",
+      "Effiently organize teams and with our solution, streamlining collaboration and enhancing productivity in your organization.",
     icon: Profile,
   },
   {
     id: 3,
-    title: "Collaboration",
-    message: ".",
+    title: "Secured messages for the employees anywhere.",
+    message:
+      "Ensure secure communication with our solution, providing a reliable platform in your business.",
     icon: Security,
   },
   {
     id: 4,
-    title: "Effectiveness",
+    title: "Share files and collaborate anywhere.",
     message:
-      "In Dodo you can turn routine messages and tasks such as huddle meetings, approvals, and requests into automated workflows to save on the back-and-forth.",
-    icon: Earth,
-  },
-  {
-    id: 5,
-    title: "Productivity",
-    message:
-      "Collaboration in email opens up the risk of spam and phising. In Dodo you can work securely with partners, vendors and customers.",
+      "Connect and collaborate effortlessly from anywhere in the world with our solution, breaking down geographical barriers for seamless commuincation.",
     icon: Earth,
   },
 ];

@@ -37,7 +37,12 @@ function Features() {
       </section>
       {/* Features list section */}
       <section className="flex flex-col items-center justify-start px-10 mt-28 max-md:p-0">
-        <Card cardData={FEATURES_DATA} icon={feature} size="w-full h-full " />
+        <Card
+          cardData={FEATURES_DATA}
+          icon={feature}
+          size="w-full h-full "
+          isFeature
+        />
       </section>
       {/* Services section */}
       <section className="flex flex-col items-center justify-center gap-5 my-28">

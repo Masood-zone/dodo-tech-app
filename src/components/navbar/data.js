@@ -35,16 +35,19 @@ const BUTTON_LINKS = [
   {
     id: 1,
     name: "Sign In",
+    variant: "none",
     path: "/signin",
   },
   {
     id: 2,
     name: "Try Free",
+    variant: "outlined",
     path: "/pricing",
   },
   {
     id: 3,
     name: "Try Paid",
+    variant: "filled",
     path: "/pricing",
   },
 ];

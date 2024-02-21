@@ -3,7 +3,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { hero, demo } from "../../assets/images";
 import Card from "../../components/card";
-import { MAIN_DATA } from "../../data/mainData";
+import { MAIN_DATA, PRODUCTS_SERVICES } from "../../data/mainData";
 import ServicesCard from "../../components/card/servicesCard";
 
 function Home() {
@@ -45,9 +45,9 @@ function Home() {
         <Card cardData={MAIN_DATA} />
       </section>
       {/* Services list section */}
-      <section className="">
+      <section className="flex flex-col items-center justify-center gap-5 my-36">
         <ServicesCard
-          data=""
+          data={PRODUCTS_SERVICES}
           title="A communication tool that suits your workplace, however you work."
         />
       </section>
