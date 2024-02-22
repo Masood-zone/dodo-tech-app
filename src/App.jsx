@@ -6,10 +6,11 @@ import Industries from "./pages/industries";
 import Pricing from "./pages/pricing";
 import Home from "./pages/home";
 import SignIn from "./pages/signin";
-import Login from "./pages/login";
 import ForgotPassword from "./pages/forgot";
 import ResetPassword from "./pages/forgot/reset";
 import NotFound from "./pages/notfound";
+import FormContainer from "./components/forms/formContainer";
+import SignUp from "./pages/signup";
 
 function App() {
   return (
@@ -23,11 +24,13 @@ function App() {
             <Route path="/industries" element={<Industries />} />
             <Route path="/pricing" element={<Pricing />} />
           </Route>
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/forms" element={<FormContainer />}>
+            <Route path="/forms/signin" element={<SignIn />} />
+            <Route path="/forms/login" element={<SignUp />} />
+            <Route path="/forms/forgot-password" element={<ForgotPassword />} />
+            <Route path="/forms/reset-password" element={<ResetPassword />} />
+          </Route>
           <Route path="*" element={<NotFound />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/reset-password" element={<ResetPassword />} />
         </Routes>
       </Router>
     </>
