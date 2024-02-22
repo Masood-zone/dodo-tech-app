@@ -1,11 +1,10 @@
 import React from "react";
+import FormHeader from "../../components/header/formHeader";
 import Forms from "../../components/forms";
 import Notice from "../../components/forms/notice";
-import FormHeader from "../../components/header/formHeader";
-import { Link } from "react-router-dom";
 
-function SignIn() {
-  const userData = [
+function SignUp() {
+  const newUserData = [
     {
       label: "Phone number",
       name: "phoneNumber",
@@ -13,8 +12,14 @@ function SignIn() {
       type: "number",
     },
     {
-      label: "Password",
+      label: "Create a password",
       name: "password",
+      placeholder: "Create password",
+      type: "password",
+    },
+    {
+      label: "Confirm password",
+      name: "confirmPwd",
       placeholder: "Enter password",
       type: "password",
     },
@@ -34,23 +39,20 @@ function SignIn() {
       <FormHeader
         title="Dodo"
         hasGradient
-        message="Welcome. Provide your phone number and password to continue"
+        message="Welcome to Dodo. Provide the information below to create an account."
       />
       {/* Forms */}
       <div className="w-[75%]">
-        <Forms data={userData} btnTitle="Sign In" onSubmit={handleSubmit} />
-        <Link to="/forms/forgot-password" className="text-heading-gray">
-          Forgot Password?
-        </Link>
+        <Forms data={newUserData} btnTitle="Sign up" onSubmit={handleSubmit} />
       </div>
       {/* Message */}
       <Notice
-        message="Do not have an account yet?"
-        link="/forms/login"
-        title="Sign Up"
+        message="Already have an account?"
+        link="/forms/signin"
+        title="Sign In"
       />
     </div>
   );
 }
 
-export default SignIn;
+export default SignUp;

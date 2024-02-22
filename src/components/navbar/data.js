@@ -36,7 +36,7 @@ const BUTTON_LINKS = [
     id: 1,
     name: "Sign In",
     variant: "none",
-    path: "/signin",
+    path: "/forms/signin",
   },
   {
     id: 2,

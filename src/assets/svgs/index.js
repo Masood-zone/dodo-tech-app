@@ -10,6 +10,8 @@ import Rocket from "./rocket.svg";
 import Security from "./security-safe.svg";
 import ArrowHead from "./arrowhead.svg";
 import Check from "./check.svg";
+import EyesOpen from "./eyesopen.svg";
+import EyesClosed from "./eyesclose.svg";
 
 export {
   Logo,
@@ -24,4 +26,6 @@ export {
   Security,
   ArrowHead,
   Check,
+  EyesClosed,
+  EyesOpen,
 };
