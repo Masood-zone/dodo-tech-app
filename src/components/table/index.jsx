@@ -7,13 +7,13 @@ function Table({ data }) {
       <thead>
         <tr className="border-none">
           <th className="border-none w-[60%]"></th>
-          <th className="text-heading-gray font-medium p-3 border-none text-lg w-1/4">
+          <th className="text-heading-gray font-medium p-3 border-none text-lg w-1/4 max-lg:text-left">
             Free
           </th>
-          <th className="text-heading-gray font-medium p-3 border-none text-lg w-1/4">
+          <th className="text-heading-gray font-medium p-3 border-none text-lg w-1/4 max-lg:text-left">
             Business
           </th>
-          <th className="text-heading-gray font-medium p-3 border-none text-lg w-1/4">
+          <th className="text-heading-gray font-medium p-3 border-none text-lg w-1/4 max-lg:text-left">
             Business +
           </th>
         </tr>

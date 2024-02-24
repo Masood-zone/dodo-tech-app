@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="flex flex-col w-full ">
       {/* Top Section */}
-      <section className="h-[700px] flex items-center justify-between mx-auto">
+      <section className="h-[700px] flex items-center justify-between mx-auto max-lg:flex-col-reverse max-lg:mx-0 max-lg:h-full">
         <div className="flex flex-col items-start justify-start ml-8 w-[85%]">
           <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2a3cde] to-blue-300 py-3">
             Simplify how your organization communicates

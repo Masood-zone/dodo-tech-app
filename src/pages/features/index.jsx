@@ -11,7 +11,7 @@ function Features() {
   return (
     <div className="flex flex-col my-20 w-full">
       {/* Top Section */}
-      <section className="flex gap-5 max-w-7xl mx-auto">
+      <section className="flex gap-5 max-w-7xl mx-auto max-lg:flex-col-reverse max-lg:mx-5">
         <div className="flex flex-col items-start justify-start">
           <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#031AFD] to-blue-400 py-3">
             Discover a new way of corporate communication.
@@ -36,16 +36,16 @@ function Features() {
         </div>
       </section>
       {/* Features list section */}
-      <section className="flex flex-col items-center justify-start px-10 mt-28 max-md:p-0">
+      <section className="flex flex-col items-center justify-start px-10 mt-28 max-lg:p-0 max-lg:justify-start max-lg:items-start">
         <Card
           cardData={FEATURES_DATA}
           icon={feature}
-          size="w-full h-full "
+          size="w-full h-full max-lg:h-[450px]"
           isFeature
         />
       </section>
       {/* Services section */}
-      <section className="flex flex-col items-center justify-center gap-5 my-28">
+      <section className="flex flex-col items-center justify-center max-lg:justify-start max-lg:items-start gap-16 my-28">
         <ServicesCard
           data={FEATURES_SERVICES}
           title="A communication that suits your workplace, however you work."
@@ -56,7 +56,7 @@ function Features() {
         <img src={banner} alt="banner" className="w-full" />
       </section>
       {/* FAQ section */}
-      <section className="my-48 px-10 flex flex-col">
+      <section className="my-48 px-10 flex flex-col max-lg:p-0">
         <Faq data={FAQ} />
       </section>
     </div>

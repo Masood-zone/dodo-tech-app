@@ -24,7 +24,7 @@ function Header({ title, note, message, icon, styling }) {
       </div>
       {/* Image */}
       <div className="w-full">
-        <Thumbnail icon={icon} size="w-full h-96 bg-base-300" />
+        <Thumbnail icon={icon} size="w-full h-96 max-lg:h-80 bg-base-300" />
       </div>
     </section>
   );

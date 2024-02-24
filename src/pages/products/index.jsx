@@ -16,7 +16,7 @@ import Header from "../../components/header";
 
 function Products() {
   return (
-    <div className="flex flex-col my-20 w-full">
+    <div className="flex flex-col my-20 w-full max-lg:px-10">
       {/* Top Section */}
       <Header
         title="Why We Built Dodo?"
@@ -54,7 +54,7 @@ function Products() {
         <img src={onboarding} alt="onboarding-banner" className="w-full" />
       </section>
       {/* FAQ section */}
-      <section className="my-28 px-10 flex flex-col">
+      <section className="my-28 px-10 flex flex-col max-lg:p-0">
         <Faq data={FAQ} />
       </section>
     </div>

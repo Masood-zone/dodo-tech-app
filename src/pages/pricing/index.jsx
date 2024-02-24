@@ -13,7 +13,7 @@ function Pricing() {
   return (
     <div className="flex flex-col my-20 w-full">
       {/* Top Section */}
-      <section className="flex items-center justify-center flex-col">
+      <section className="flex items-center justify-center flex-col max-lg:text-center">
         <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2a3cde] to-blue-300 py-3">
           Do more with a Paid Dodo Subscription
         </h1>
@@ -24,46 +24,80 @@ function Pricing() {
       </section>
       {/* Pricing Card */}
       <section className="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 mx-10 border-2 border-t-4 border-t-blue-600 mt-14">
-        {PRICING_DATA.map((data) => (
-          <div
-            key={data.id}
-            className="flex flex-col items-start justify-start border-r-2 px-2 pt-2"
-          >
-            {/* Heading & message */}
-            <h1 className="text-xl font-medium py-5 text-heading-gray ">
-              {data.title}
-            </h1>
-            <p className="text-sm text-light-gray py-2">{data.message}</p>
-            {/* Pricing */}
-            <p className="text-3xl py-2 font-medium text-heading-gray">
-              {data.price}
-            </p>
-            {/* Button */}
-            <button className="w-max flex gap-2 items-center bg-[#031AFD] text-white p-3 my-4 rounded-md hover:bg-[#2939cb]">
-              Get Started
-              <FaArrowRightLong />
-            </button>
-            {/* List */}
-            <ul className="flex flex-col">
-              {data.price_list.map((list) => (
-                <li
-                  className="flex items-center py-4 justify-start gap-2 text-light-gray"
-                  key={list.id}
-                >
-                  <img src={Check} alt="check-icon" className="" />
-                  {list.title}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        {PRICING_DATA.map((data) =>
+          data.id % 2 === 0 || data.id % 2 === 1 ? (
+            <div
+              key={data.id}
+              className="flex flex-col max-sm:border-t-2 max-sm:border-t-gray-500 items-start justify-start border-r-2 px-2 pt-2"
+            >
+              {/* Heading & message */}
+              <h1 className="text-xl font-medium py-5 text-heading-gray ">
+                {data.title}
+              </h1>
+              <p className="text-sm text-light-gray py-2">{data.message}</p>
+              {/* Pricing */}
+              <p className="text-3xl py-2 font-medium text-heading-gray">
+                {data.price}
+              </p>
+              {/* Button */}
+              <button className="w-max flex gap-2 items-center bg-[#031AFD] text-white p-3 my-4 rounded-md hover:bg-[#2939cb]">
+                Get Started
+                <FaArrowRightLong />
+              </button>
+              {/* List */}
+              <ul className="flex flex-col">
+                {data.price_list.map((list) => (
+                  <li
+                    className="flex items-center py-4 justify-start gap-2 text-light-gray"
+                    key={list.id}
+                  >
+                    <img src={Check} alt="check-icon" className="" />
+                    {list.title}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : (
+            <div
+              key={data.id}
+              className="flex flex-col items-start justify-start border-r-2 px-2 pt-2"
+            >
+              {/* Heading & message */}
+              <h1 className="text-xl font-medium py-5 text-heading-gray ">
+                {data.title}
+              </h1>
+              <p className="text-sm text-light-gray py-2">{data.message}</p>
+              {/* Pricing */}
+              <p className="text-3xl py-2 font-medium text-heading-gray">
+                {data.price}
+              </p>
+              {/* Button */}
+              <button className="w-max flex gap-2 items-center bg-[#031AFD] text-white p-3 my-4 rounded-md hover:bg-[#2939cb]">
+                Get Started
+                <FaArrowRightLong />
+              </button>
+              {/* List */}
+              <ul className="flex flex-col">
+                {data.price_list.map((list) => (
+                  <li
+                    className="flex items-center py-4 justify-start gap-2 text-light-gray"
+                    key={list.id}
+                  >
+                    <img src={Check} alt="check-icon" className="" />
+                    {list.title}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        )}
       </section>
       {/* Pricing List Extended */}
-      <section className="overflow-x-auto mt-28 mx-10">
+      <section className="overflow-x-auto mt-28 mx-10 max-lg:m-0 max-lg:mt-10">
         <Table data={EXTENDED_PRICING_DATA} />
       </section>
       {/* Faq */}
-      <section className="my-28 px-10 flex flex-col">
+      <section className="my-28 px-10 flex flex-col max-lg:p-0">
         <Faq data={FAQ} />
       </section>
     </div>

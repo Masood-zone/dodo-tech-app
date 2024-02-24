@@ -11,7 +11,7 @@ function Navbar() {
     setActiveLink(path);
   };
   return (
-    <div className="navbar fixed w-full top-0 left-0 z-10 navbar-transparent px-10 py-4">
+    <div className="navbar fixed w-full top-0 left-0 z-10 navbar-transparent px-10 py-4 max-lg:p-0 max-sm:p-0">
       {/* Main logo */}
       <div className="navbar-start items-center">
         <div className="dropdown">
@@ -61,7 +61,7 @@ function Navbar() {
         </div>
       </div>
       {/* Buttons */}
-      <div className="navbar-end flex gap-3 max-md:w-full">
+      <div className="navbar-end flex gap-3 max-md:w-full max-lg:px-1">
         {BUTTON_LINKS.map((button) => (
           <Link
             key={button.id}
@@ -69,9 +69,9 @@ function Navbar() {
               button.variant === "none"
                 ? "btn btn-ghost "
                 : button.variant === "outlined"
-                ? "border-2 border-blue-600 rounded flex items-center gap-2 p-2 text-blue-600"
+                ? "border-2 border-blue-600 rounded flex items-center gap-2 p-2 max-lg:gap-0 max-lg:px-1 text-blue-600"
                 : button.variant === "filled"
-                ? "bg-[#031AFD] text-white rounded flex items-center gap-2 p-2"
+                ? "bg-[#031AFD] text-white rounded flex items-center gap-2 p-2 max-lg:gap-0 max-lg:px-1"
                 : "btn btn-ghost"
             }`}
             to={button.path}
