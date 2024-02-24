@@ -11,7 +11,7 @@ function Navbar() {
     setActiveLink(path);
   };
   return (
-    <div className="navbar fixed w-full top-0 left-0 z-10 navbar-transparent px-10 py-4 max-lg:p-0 max-sm:p-0">
+    <div className="navbar fixed w-full top-0 left-0 z-10 navbar-transparent px-10 py-4 max-lg:p-0 max-xl:p-0 max-sm:p-0">
       {/* Main logo */}
       <div className="navbar-start items-center">
         <div className="dropdown">
